@@ -32,7 +32,7 @@
 ## 🖥️ Preview
 
 <p align="center">
-  <img src="assets/nexo-preview.png" alt="Nexo running on Windows" width="100%"/>
+  <img src="src/assets/nexo-preview.png" alt="Nexo running on Windows" width="100%"/>
 </p>
 
 > Nexo stays compact when the desktop is idle and expands around the information or control you need.
