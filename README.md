@@ -1,119 +1,378 @@
+<div align="center">
+
+<img src="assets/nexo-splash.png" alt="Nexo" width="220"/>
+
 # Nexo
 
-> **A premium Windows desktop widget inspired by Apple's Dynamic Island — built with Electron, React, TypeScript, and native Windows integrations.**
+### A premium Dynamic Island-style desktop experience for Windows.
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-71%25-3178C6?style=flat-square\&logo=typescript\&logoColor=white)](#)
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square\&logo=react\&logoColor=black)](#)
-[![Electron](https://img.shields.io/badge/Electron-Windows-47848F?style=flat-square\&logo=electron\&logoColor=white)](#)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square\&logo=vite\&logoColor=white)](#)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square\&logo=tailwindcss\&logoColor=white)](#)
-[![Vitest](https://img.shields.io/badge/Tests-Vitest-6E9F18?style=flat-square\&logo=vitest\&logoColor=white)](#)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](#license)
+**Nexo** is a lightweight Windows desktop widget that brings an adaptive, always-available interface to your desktop — surfacing system activity, media, controls, notifications, and useful actions without taking over your screen.
 
----
+<p>
+  <a href="#-features">Features</a> •
+  <a href="#-download">Download</a> •
+  <a href="#-getting-started">Development</a> •
+  <a href="#-architecture">Architecture</a>
+</p>
 
-## ✨ Overview
+<p>
+  <img src="https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D4?style=flat-square&logo=windows&logoColor=white" alt="Windows"/>
+  <img src="https://img.shields.io/badge/Electron-28-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron"/>
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="MIT License"/>
+</p>
 
-**Nexo** brings a Dynamic Island-style experience to Windows.
-
-Instead of being another traditional desktop widget, Nexo provides a small, adaptive interface that expands when something important happens and stays minimal when the system is idle.
-
-It can surface system information and interactive controls such as:
-
-* 🔊 Volume
-* 🔆 Brightness
-* 🔋 Battery
-* 🌐 Network activity
-* 🎵 Media playback
-* 🎙️ Microphone activity
-* 📋 Clipboard events
-* 📥 Downloads
-* 🔔 Notifications
-* ⚡ Quick system controls
-* 🤖 AI panel
-* ⚙️ Application settings
-
-The project is built as a **Windows desktop application using Electron**, with React handling the UI and a native bridge connecting the renderer to Windows/system-level functionality.
+</div>
 
 ---
 
-## 🎯 Why Nexo?
+## 🖥️ Preview
 
-Windows has plenty of desktop widgets, but most behave like traditional panels or floating windows.
+<p align="center">
+  <img src="assets/nexo-preview.png" alt="Nexo running on Windows" width="100%"/>
+</p>
+
+> Nexo stays compact when the desktop is idle and expands around the information or control you need.
+
+---
+
+## ✨ Why Nexo?
+
+Most desktop widgets behave like traditional panels that permanently occupy screen space.
 
 Nexo takes a different approach:
 
-> **Keep the interface hidden when nothing needs attention and expand it when useful information becomes available.**
+> **Stay minimal by default. Expand when something matters.**
 
 The goal is to combine:
 
-**Minimal UI + System awareness + Smooth animations + Native Windows functionality**
+- **Minimal desktop UI**
+- **Real-time system awareness**
+- **Native Windows controls**
+- **Smooth, spring-based animations**
+- **A focused, distraction-free experience**
 
-into a single desktop experience.
+into one small desktop surface.
 
 ---
 
 ## 🚀 Features
 
-### 🎵 Media Widget
+### 🎵 Media
 
-Displays currently playing media and provides interactive playback controls.
+- Current track and playback state
+- Play / pause
+- Previous / next
+- Compact and expanded media views
 
-* Track information
-* Playback state
-* Play / pause
-* Previous / next controls
-* Dynamic expansion
+### 🔊 System Controls
 
-### 🔊 Volume Control
+- Volume control
+- Mute / unmute
+- Display brightness
+- Wi-Fi controls
+- Bluetooth controls
+- Airplane mode
+- Night Light
+- Focus controls
 
-Provides quick access to system volume directly from the Nexo interface.
+### 📊 System Monitoring
 
-### 🔆 Brightness Control
+- Battery status
+- Network connection
+- Network speed
+- CPU / memory / disk information
+- System uptime
+- Microphone activity
+- Camera activity
 
-Adjust display brightness without opening Windows settings.
+### 🔔 Activity & Notifications
 
-### 🔋 Battery Monitoring
-
-Displays battery information and reacts to changes in battery state.
-
-### 🌐 Network Monitoring
-
-Shows network activity and connection information through a dedicated network widget.
-
-### 🎙️ Microphone Indicator
-
-Provides a visual indication when microphone activity is detected.
-
-### 📋 Clipboard
-
-Displays clipboard-related activity through the clipboard widget.
-
-### 📥 Download Notifications
-
-Surfaces download activity without requiring users to constantly check their browser.
-
-### 🔔 Notifications
-
-Displays system/application events through an expandable notification interface.
+- Windows/application notifications
+- Download activity
+- Clipboard activity
+- Context-aware activity widgets
+- Priority-based activity switching
 
 ### ⚡ Quick Controls
 
-Provides quick access to frequently used system controls through an expandable panel.
+A dedicated control panel for frequently used Windows actions without opening multiple system settings pages.
 
 ### 🤖 AI Panel
 
-An integrated AI-oriented panel designed to provide an additional intelligent interaction layer inside the desktop widget.
+An integrated AI-oriented interaction layer designed to make Nexo more than a passive widget.
 
 ### ⚙️ Settings
 
-Includes a dedicated settings interface for configuring Nexo behavior.
+- Theme and appearance controls
+- Transparency
+- Blur intensity
+- Animation speed
+- Notification behavior
+- Startup behavior
+- Widget preferences
+- Always-on-top / pinned behavior
 
-### 🎨 Adaptive UI & Animations
+---
 
-Nexo uses spring-based animations and transitions to create a fluid expansion/collapse experience.
+## 🎨 Adaptive Interface
 
-Animation configuration is separated into:
+Nexo uses a centralized activity manager to decide what the island should display.
+
+Instead of every widget fighting for attention:
+
+```text
+System Event
+     │
+     ▼
+Activity Manager
+     │
+     ├── Sustained activity
+     │      ├── Media
+     │      └── Microphone
+     │
+     ├── Transient activity
+     │      ├── Volume
+     │      ├── Brightness
+     │      ├── Battery
+     │      └── Network
+     │
+     └── Notification
+             │
+             ▼
+        Nexo Interface
+```
+
+This keeps the interface stable while allowing important events to take priority.
+
+---
+
+## 🏗️ Architecture
+
+Nexo is split into three major layers:
+
+```text
+┌───────────────────────────────────────────────┐
+│                 React Renderer                │
+│                                               │
+│ Components • Hooks • Zustand • Animations     │
+└───────────────────────┬───────────────────────┘
+                        │
+                       IPC
+                        │
+┌───────────────────────▼───────────────────────┐
+│              Electron Main Process            │
+│                                               │
+│ Window • IPC • Lifecycle • Services           │
+└───────────────────────┬───────────────────────┘
+                        │
+                 Native Bridge
+                        │
+┌───────────────────────▼───────────────────────┐
+│              Windows / System APIs             │
+│                                               │
+│ Audio • Network • Battery • Bluetooth • etc.  │
+└───────────────────────────────────────────────┘
+```
+
+### Application flow
+
+```text
+Windows / System
+       ↓
+Native Bridge
+       ↓
+Electron Main
+       ↓
+IPC
+       ↓
+Preload
+       ↓
+React Renderer
+       ↓
+Nexo UI
+```
+
+Privileged operations remain outside the React renderer, keeping the renderer isolated from direct Node.js/system access.
+
+---
+
+## 🧩 Project Structure
+
+```text
+nexo/
+│
+├── bridge/                 # PowerShell native Windows bridge
+│
+├── electron/               # Electron main-process code
+│   ├── services/
+│   ├── config.ts
+│   ├── ipc.ts
+│   ├── main.ts
+│   ├── nativeBridge.ts
+│   ├── preload.ts
+│   └── tsconfig.json
+│
+├── src/                    # React renderer
+│   ├── animations/         # Springs and transitions
+│   ├── assets/             # UI assets
+│   ├── components/         # Nexo widgets and panels
+│   ├── hooks/              # System and UI hooks
+│   ├── ipc/                # Shared IPC channels
+│   ├── services/           # Renderer services
+│   ├── store/              # Zustand application state
+│   ├── system/             # Settings/startup logic
+│   ├── types/              # Shared TypeScript types
+│   ├── utils/              # Helpers/activity management
+│   ├── widgets/            # Widget-level UI
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+│
+├── public/                 # Static assets
+│
+├── electron-builder.js     # Windows packaging configuration
+├── index.html
+├── install.ps1
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+├── tsconfig.renderer.json
+└── vite.config.ts
+```
+
+> Generated build output, packaged installers, logs, `node_modules`, and temporary test files should stay out of the source structure and should be ignored by Git.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Role |
+|---|---|
+| **Electron** | Windows desktop runtime |
+| **React** | UI and component system |
+| **TypeScript** | Type-safe application development |
+| **Vite** | Frontend development and build tooling |
+| **Tailwind CSS** | UI styling |
+| **Zustand** | Global application state |
+| **Framer Motion** | Animations and transitions |
+| **Electron IPC** | Renderer ↔ main-process communication |
+| **PowerShell** | Windows/system bridge |
+| **Electron Builder** | Windows installer packaging |
+
+---
+
+## 📋 Requirements
+
+- Windows 10 or Windows 11
+- Node.js 18+
+- npm
+- Git
+
+Some system-level controls may require **administrator privileges**.
+
+---
+
+## 📥 Download
+
+The easiest way to try Nexo is to download the latest Windows installer from GitHub Releases.
+
+**[Download Nexo →](https://github.com/ayush-thakur01/Nexo/releases/latest)**
+
+### Installation
+
+1. Download the latest `Nexo Setup.exe`.
+2. Run the installer.
+3. Choose the installation directory if prompted.
+4. Launch **Nexo**.
+5. Allow administrator privileges when Windows asks for them.
+
+> Windows SmartScreen may display a warning for unsigned builds. Nexo is currently distributed as an unsigned Windows application.
+
+---
+
+## 💻 Getting Started
+
+### Clone
+
+```bash
+git clone https://github.com/ayush-thakur01/Nexo.git
+cd Nexo
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start development
+
+```bash
+npm run dev
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Create Windows installer
+
+```bash
+npm run dist
+```
+
+The packaged output is generated in:
+
+```text
+dist-electron/
+```
+
+---
+
+## 🔌 Electron IPC
+
+Nexo uses a controlled IPC layer between the renderer and Electron.
+
+```text
+React Component
+      ↓
+React Hook
+      ↓
+Preload API
+      ↓
+IPC Channel
+      ↓
+Electron Main
+      ↓
+Native Bridge
+      ↓
+Windows
+```
+
+Important Electron modules:
+
+```text
+electron/
+├── main.ts
+├── preload.ts
+├── ipc.ts
+├── nativeBridge.ts
+└── services/
+```
+
+The preload layer exposes only the APIs required by the renderer instead of enabling direct Node.js access.
+
+---
+
+## 🎞️ Animation System
+
+Animations are separated from component logic:
 
 ```text
 src/animations/
@@ -122,364 +381,99 @@ src/animations/
 └── transitions.ts
 ```
 
----
-
-## 🏗️ Architecture
-
-Nexo follows an **Electron + React architecture** where the renderer, Electron main process, and native Windows functionality are separated.
-
-```mermaid
-graph TD
-
-    A[React Renderer] --> B[React Components]
-
-    B --> C[Hooks]
-    B --> D[Zustand Store]
-    B --> E[Animations]
-
-    C --> F[IPC Channels]
-
-    F --> G[Electron Preload]
-
-    G --> H[Electron Main Process]
-
-    H --> I[Native Bridge]
-
-    I --> J[Windows APIs / System Services]
-
-    H --> K[Electron Services]
-
-    K --> L[Admin Services]
-```
-
-### Application flow
-
-```text
-Windows System
-      ↓
-Native Bridge
-      ↓
-Electron Main Process
-      ↓
-IPC
-      ↓
-Preload
-      ↓
-React Renderer
-      ↓
-Nexo UI
-```
-
-This separation helps keep privileged system operations outside the React renderer.
+This makes expansion and collapse behavior easier to tune without scattering animation constants throughout the UI.
 
 ---
 
-## 📁 Project Structure
+## 🧠 State Management
 
-```text
-nexo/
-│
-├── electron/
-│   ├── services/
-│   │   └── adminService.ts
-│   ├── config.ts
-│   ├── ipc.ts
-│   ├── main.ts
-│   ├── nativeBridge.ts
-│   ├── preload.ts
-│   └── tsconfig.json
-│
-├── src/
-│   ├── animations/
-│   │   ├── config.ts
-│   │   ├── springs.ts
-│   │   └── transitions.ts
-│   │
-│   ├── components/
-│   │   ├── AIPanel.tsx
-│   │   ├── BatteryWidget.tsx
-│   │   ├── BrightnessWidget.tsx
-│   │   ├── ClipboardWidget.tsx
-│   │   ├── ContextMenu.tsx
-│   │   ├── ControlToggle.tsx
-│   │   ├── DownloadWidget.tsx
-│   │   ├── IdleIsland.tsx
-│   │   ├── MediaWidget.tsx
-│   │   ├── MicIndicator.tsx
-│   │   ├── NetworkWidget.tsx
-│   │   ├── Nexo.tsx
-│   │   ├── NotificationWidget.tsx
-│   │   ├── QuickControlsPanel.tsx
-│   │   ├── SettingsPanel.tsx
-│   │   └── VolumeWidget.tsx
-│   │
-│   ├── hooks/
-│   │   ├── useBattery.ts
-│   │   ├── useDevices.ts
-│   │   ├── useLiveClock.ts
-│   │   ├── useMedia.ts
-│   │   ├── useNetwork.ts
-│   │   ├── useNotifications.ts
-│   │   ├── useQuickControls.ts
-│   │   ├── useSettings.ts
-│   │   ├── useSystemStreams.ts
-│   │   └── useVolume.ts
-│   │
-│   ├── ipc/
-│   │   └── channels.ts
-│   │
-│   ├── store/
-│   │   └── islandStore.ts
-│   │
-│   ├── system/
-│   │   ├── settings.ts
-│   │   └── startup.ts
-│   │
-│   ├── types/
-│   │   └── index.ts
-│   │
-│   ├── utils/
-│   │   ├── activities.ts
-│   │   └── helpers.ts
-│   │
-│   ├── App.tsx
-│   ├── index.css
-│   ├── main.tsx
-│   └── vite-env.d.ts
-│
-├── electron-builder.js
-├── index.html
-├── install.ps1
-├── package.json
-├── postcss.config.js
-├── tailwind.config.ts
-├── tsconfig.json
-├── tsconfig.renderer.json
-└── vite.config.ts
-```
+Nexo uses Zustand for centralized application state.
 
-> Build outputs such as `dist-electron/`, generated `.pak` files, logs, and packaged executables are intentionally excluded from the source structure.
+The store manages areas such as:
+
+- Settings
+- Current widget
+- Media
+- Volume
+- Battery
+- Brightness
+- Network
+- Notifications
+- Clipboard
+- Downloads
+- Quick Controls
+- Bluetooth devices
+- Wi-Fi networks
+- Timers
+- Stopwatch
+- UI panels
 
 ---
 
-## 🛠️ Tech Stack
+## 🔐 Security Model
 
-| Technology           | Purpose                             |
-| -------------------- | ----------------------------------- |
-| **Electron**         | Windows desktop application runtime |
-| **React**            | User interface                      |
-| **TypeScript**       | Type-safe application development   |
-| **Vite**             | Frontend build tooling              |
-| **Tailwind CSS**     | UI styling                          |
-| **Zustand**          | Application state management        |
-| **IPC**              | Renderer ↔ Electron communication   |
-| **Vitest**           | Testing                             |
-| **Electron Builder** | Windows application packaging       |
+Nexo follows Electron's process separation model:
 
----
+- `contextIsolation` enabled
+- `nodeIntegration` disabled in the renderer
+- Native/system operations handled outside React
+- IPC used as the communication boundary
+- Privileged actions checked before execution
 
-## 📋 Requirements
-
-Before running Nexo locally, make sure you have:
-
-* Windows 10/11
-* Node.js 18+
-* npm
-* Git
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone <repository-url>
-cd nexo
-```
-
-### 2. Install dependencies
-
-```bash
-npm install
-```
-
-### 3. Start the development application
-
-```bash
-npm start
-```
-
-If your local `package.json` uses a different development command, use the corresponding script defined there.
-
-### 4. Build Nexo
-
-```bash
-npm run build
-```
-
-### 5. Run tests
-
-```bash
-npm test
-```
-
----
-
-## 🔌 Electron IPC Architecture
-
-Nexo uses Electron IPC to safely communicate between the React renderer and privileged Electron processes.
-
-Example flow:
-
-```text
-React Component
-      ↓
-React Hook
-      ↓
-IPC Channel
-      ↓
-Preload
-      ↓
-Electron Main
-      ↓
-Native Windows Function
-```
-
-Important Electron-side modules include:
-
-```text
-electron/main.ts
-electron/preload.ts
-electron/ipc.ts
-electron/nativeBridge.ts
-```
-
-This architecture prevents the React renderer from directly accessing privileged Node.js functionality.
-
----
-
-## 🧩 Core Modules
-
-### Renderer
-
-The React renderer is responsible for:
-
-* UI rendering
-* Widget states
-* User interactions
-* Animations
-* Application state
-* Settings UI
-
-### Electron Main Process
-
-Responsible for:
-
-* Window management
-* IPC handlers
-* Application lifecycle
-* Native system communication
-* Desktop integration
-
-### Native Bridge
-
-Acts as the connection between Electron and Windows/system functionality.
-
-This allows Nexo to expose system-level functionality while keeping the renderer isolated.
-
----
-
-## 🧪 Testing
-
-Nexo includes a test setup using **Vitest**.
-
-Run:
-
-```bash
-npm test
-```
-
-For a development workflow with coverage, use the scripts available in `package.json`.
-
----
-
-## 🗺️ Roadmap
-
-### ✅ Current
-
-* [x] Electron desktop application
-* [x] React + TypeScript UI
-* [x] Dynamic expandable interface
-* [x] Battery widget
-* [x] Volume widget
-* [x] Brightness widget
-* [x] Network widget
-* [x] Media widget
-* [x] Notification widget
-* [x] Clipboard widget
-* [x] Download widget
-* [x] Microphone indicator
-* [x] Quick controls
-* [x] Settings panel
-* [x] IPC architecture
-* [x] Native bridge
-* [x] Windows packaging
-* [x] Test suite
-
-### 🔄 Future
-
-* [ ] Spotify integration
-* [ ] More Windows system integrations
-* [ ] Advanced notification handling
-* [ ] Custom themes
-* [ ] Widget customization
-* [ ] Multi-monitor improvements
-* [ ] Performance optimizations
-* [ ] Automatic updates
-* [ ] Enhanced AI capabilities
-* [ ] More contextual widgets
+This architecture helps reduce unnecessary access from the renderer to the underlying system.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, ideas, and improvements are welcome.
-
-### Fork the repository
-
-```bash
-git fork
-```
+Contributions, bug reports, feature ideas, and UI improvements are welcome.
 
 ### Create a feature branch
 
 ```bash
-git checkout -b feature/amazing-feature
+git checkout -b feature/your-feature
 ```
 
 ### Make your changes
 
+### Commit
+
 ```bash
 git add .
-git commit -m "feat: add amazing feature"
+git commit -m "feat: add your feature"
 ```
 
-### Push your branch
+### Push
 
 ```bash
-git push origin feature/amazing-feature
+git push origin feature/your-feature
 ```
 
 Then open a Pull Request.
+
+Please keep changes focused and describe what was changed and why.
+
+---
+
+## 🐛 Issues & Feature Requests
+
+Found a bug or have an idea?
+
+Open an issue in the repository with:
+
+- What happened
+- What you expected
+- Steps to reproduce
+- Windows version
+- Relevant logs or screenshots
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
+Nexo is released under the **MIT License**.
 
-See the `LICENSE` file for details.
+See [`LICENSE`](LICENSE) for details.
 
 ---
 
@@ -488,16 +482,25 @@ See the `LICENSE` file for details.
 **Ayush**
 
 Computer Science Engineering Student
-Interested in **Software Development, Backend Engineering, Desktop Applications, and AI-powered products.**
+
+Interested in software development, backend engineering, desktop applications, and AI-powered products.
 
 ---
 
 ## ⭐ Support
 
-If you find Nexo interesting, consider giving the repository a ⭐ on GitHub.
+If you like Nexo, consider giving the repository a ⭐.
 
-It helps the project grow and motivates further development.
+It helps the project get discovered and motivates continued development.
 
 ---
 
-> **Nexo — bringing a little Dynamic Island magic to Windows.**
+<div align="center">
+
+### Nexo
+
+**A small interface for a smarter Windows desktop.**
+
+Made with ❤️ and TypeScript.
+
+</div>
