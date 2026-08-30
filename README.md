@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/nexo-splash.png" alt="Nexo" width="220"/>
+<img src="src/assets/nexo-splash.png" alt="Nexo" width="220"/>
 
 # Nexo
 
