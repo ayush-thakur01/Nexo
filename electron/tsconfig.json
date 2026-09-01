@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "lib": ["ES2022"],
+    "rootDir": "..",
+    "outDir": "../electron-dist",
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": false,
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "composite": false
+  },
+  "include": [
+    "*.ts",
+    "../src/system/settings.ts",
+    "../src/ipc/channels.ts",
+    "../src/types/index.ts",
+    "../src/system/startup.ts"
+  ],
+  "exclude": ["../node_modules", "../electron-dist", "../dist"]
+}

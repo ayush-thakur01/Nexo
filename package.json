@@ -1,0 +1,103 @@
+{
+  "name": "nexo",
+  "version": "1.0.0",
+  "description": "Windows Nexo - Premium desktop widget inspired by iPhone Dynamic Island",
+  "main": "electron-dist/electron/main.js",
+  "scripts": {
+    "dev": "concurrently --names vite,electron \"vite\" \"npm run build:electron && wait-on http://localhost:3000 && npm start\"",
+    "start": "electron .",
+    "build:electron": "tsc -p electron/tsconfig.json",
+    "build": "npm run build:electron && vite build && xcopy dist\\* electron-dist\\electron\\ /Y /I /E",
+    "make": "npm run build && electron-builder --win",
+    "dist": "electron-builder --win --x64",
+    "lint": "eslint . --ext ts,tsx",
+    "format": "prettier --write .",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "nexo",
+    "windows",
+    "widget",
+    "overlay",
+    "desktop"
+  ],
+  "license": "MIT",
+  "author": "Nexo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayush-thakur01/Nexo.git"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.26.0",
+    "framer-motion": "^11.2.6",
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^8.67.0",
+    "@typescript-eslint/parser": "^8.67.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.17",
+    "concurrently": "^8.2.2",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.13.3",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.4",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "wait-on": "^9.1.0"
+  },
+  "build": {
+    "appId": "com.nexo.windows",
+    "productName": "Nexo",
+    "executableName": "Nexo",
+    "artifactName": "Nexo Setup.${ext}",
+    "icon": "build/icon.ico",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron-dist/**/*",
+      "bridge/**/*",
+      "public/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "asarUnpack": [
+      "bridge/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "NSIS",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createStartMenuShortcut": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Nexo"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "ayush-thakur01",
+      "repo": "Nexo"
+    }
+  }
+}

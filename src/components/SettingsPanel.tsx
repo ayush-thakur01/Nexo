@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useIslandStore } from "../store/islandStore";
 import { springPresets } from "../animations/springs";
@@ -204,56 +204,6 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ onClose }) => {
         ))}
       </div>
 
-      <div className="border-t border-white/10 mt-3 pt-3 space-y-2">
-        <p className="text-white/45 text-[10px] uppercase tracking-wider">
-          Notch
-        </p>
-        <Row
-          title="Reserve notch area"
-          description="Maximized apps avoid the top band."
-        >
-          <Toggle
-            value={local.reserveNotch}
-            onChange={(v) => handle("reserveNotch", v)}
-          />
-        </Row>
-        <Row title="Show over fullscreen">
-          <Toggle
-            value={local.showOverFullscreen}
-            onChange={(v) => handle("showOverFullscreen", v)}
-          />
-        </Row>
-        <Row title="All monitors">
-          <Toggle
-            value={local.showOnAllMonitors}
-            onChange={(v) => handle("showOnAllMonitors", v)}
-          />
-        </Row>
-        <div className="flex items-center justify-between py-1">
-          <span className="text-white/85 text-[12px]">Width</span>
-          <input
-            type="range"
-            min={120}
-            max={400}
-            step={10}
-            value={local.notchWidth}
-            onChange={(e) => handle("notchWidth", Number(e.target.value))}
-            className="w-32 h-1 bg-white/10 rounded-full appearance-none accent-white/60"
-          />
-        </div>
-        <div className="flex items-center justify-between py-1">
-          <span className="text-white/85 text-[12px]">Height</span>
-          <input
-            type="range"
-            min={30}
-            max={120}
-            step={2}
-            value={local.notchHeight}
-            onChange={(e) => handle("notchHeight", Number(e.target.value))}
-            className="w-32 h-1 bg-white/10 rounded-full appearance-none accent-white/60"
-          />
-        </div>
-      </div>
 
       <div className="border-t border-white/10 mt-3 pt-3 space-y-2">
         <p className="text-white/45 text-[10px] uppercase tracking-wider">

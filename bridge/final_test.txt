@@ -1,0 +1,7 @@
+{"type":"ready"}
+{"channel":"volume:changed","data":{"muted":false,"level":1,"isChanging":true},"type":"event"}
+{"channel":"battery:changed","data":{"status":"charging","level":79,"charging":true},"type":"event"}
+{"channel":"devices:changed","data":{"micActive":true,"cameraActive":false},"type":"event"}
+{"channel":"network:changed","data":{"airplaneMode":false,"wifiConnected":true,"bluetooth":false,"wifiSSID":"Wi-Fi","vpnConnected":false,"wifiSignal":0,"internetAvailable":true},"type":"event"}
+{"channel":"volume:changed","data":{"muted":false,"level":1,"isChanging":true},"type":"event"}
+{"channel":"volume:changed","data":{"muted":false,"level":1,"isChanging":true},"type":"event"}
