@@ -42,10 +42,7 @@ const Nexo: React.FC = React.memo(() => {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
 
-  // Resize to the requested widget's intrinsic dimensions. We only animate width/height
-  // when the active widget actually changes (or quick controls opens/closes). This is the
-  // *only* layout-driven animation, and it's clamped so we never ping-pong the pill.
-  // The media widget has two sizes: compact pill vs. user-expanded full controls.
+
   useEffect(() => {
     if (!isVisible) return;
     if (isQuickControlsOpen) {
