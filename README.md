@@ -29,7 +29,7 @@
 
 ---
 
-## 🖥️ Preview
+##  Preview
 
 <p align="center">
   <img src="src/assets/nexo-preview.png" alt="Nexo running on Windows" width="100%"/>
@@ -39,7 +39,7 @@
 
 ---
 
-## ✨ Why Nexo?
+##  Why Nexo?
 
 Most desktop widgets behave like traditional panels that permanently occupy screen space.
 
@@ -59,16 +59,16 @@ into one small desktop surface.
 
 ---
 
-## 🚀 Features
+##  Features
 
-### 🎵 Media
+###  Media
 
 - Current track and playback state
 - Play / pause
 - Previous / next
 - Compact and expanded media views
 
-### 🔊 System Controls
+###  System Controls
 
 - Volume control
 - Mute / unmute
@@ -79,7 +79,7 @@ into one small desktop surface.
 - Night Light
 - Focus controls
 
-### 📊 System Monitoring
+###  System Monitoring
 
 - Battery status
 - Network connection
@@ -89,7 +89,7 @@ into one small desktop surface.
 - Microphone activity
 - Camera activity
 
-### 🔔 Activity & Notifications
+###  Activity & Notifications
 
 - Windows/application notifications
 - Download activity
@@ -97,15 +97,12 @@ into one small desktop surface.
 - Context-aware activity widgets
 - Priority-based activity switching
 
-### ⚡ Quick Controls
+###  Quick Controls
 
 A dedicated control panel for frequently used Windows actions without opening multiple system settings pages.
 
-### 🤖 AI Panel
 
-An integrated AI-oriented interaction layer designed to make Nexo more than a passive widget.
-
-### ⚙️ Settings
+###  Settings
 
 - Theme and appearance controls
 - Transparency
@@ -118,7 +115,7 @@ An integrated AI-oriented interaction layer designed to make Nexo more than a pa
 
 ---
 
-## 🎨 Adaptive Interface
+##  Adaptive Interface
 
 Nexo uses a centralized activity manager to decide what the island should display.
 
@@ -150,7 +147,7 @@ This keeps the interface stable while allowing important events to take priority
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 Nexo is split into three major layers:
 
@@ -200,7 +197,7 @@ Privileged operations remain outside the React renderer, keeping the renderer is
 
 ---
 
-## 🧩 Project Structure
+##  Project Structure
 
 ```text
 nexo/
@@ -265,7 +262,7 @@ nexo/
 
 ---
 
-## 📋 Requirements
+##  Requirements
 
 - Windows 10 or Windows 11
 - Node.js 18+
@@ -276,7 +273,7 @@ Some system-level controls may require **administrator privileges**.
 
 ---
 
-## 📥 Download
+##  Download
 
 The easiest way to try Nexo is to download the latest Windows installer from GitHub Releases.
 
@@ -294,7 +291,7 @@ The easiest way to try Nexo is to download the latest Windows installer from Git
 
 ---
 
-## 💻 Getting Started
+##  Getting Started
 
 ### Clone
 
@@ -385,7 +382,7 @@ This makes expansion and collapse behavior easier to tune without scattering ani
 
 ---
 
-## 🧠 State Management
+##  State Management
 
 Nexo uses Zustand for centralized application state.
 
@@ -410,7 +407,7 @@ The store manages areas such as:
 
 ---
 
-## 🔐 Security Model
+##  Security Model
 
 Nexo follows Electron's process separation model:
 
@@ -424,7 +421,7 @@ This architecture helps reduce unnecessary access from the renderer to the under
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, bug reports, feature ideas, and UI improvements are welcome.
 
@@ -455,7 +452,7 @@ Please keep changes focused and describe what was changed and why.
 
 ---
 
-## 🐛 Issues & Feature Requests
+##  Issues & Feature Requests
 
 Found a bug or have an idea?
 
@@ -469,25 +466,16 @@ Open an issue in the repository with:
 
 ---
 
-## 📄 License
+##  License
 
 Nexo is released under the **MIT License**.
 
 See [`LICENSE`](LICENSE) for details.
 
----
-
-## 👨‍💻 Author
-
-**Ayush**
-
-Computer Science Engineering Student
-
-Interested in software development, backend engineering, desktop applications, and AI-powered products.
 
 ---
 
-## ⭐ Support
+##  Support
 
 If you like Nexo, consider giving the repository a ⭐.
 
@@ -501,6 +489,6 @@ It helps the project get discovered and motivates continued development.
 
 **A small interface for a smarter Windows desktop.**
 
-Made with ❤️ and TypeScript.
+Made  TypeScript.
 
 </div>
